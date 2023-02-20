@@ -1,0 +1,36 @@
+object frmPrincipal: TfrmPrincipal
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
+  Caption = 'Reiniciar Servi'#231'o Impressora'
+  ClientHeight = 155
+  ClientWidth = 493
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  Position = poScreenCenter
+  TextHeight = 15
+  object btnReiniciar: TSpeedButton
+    Left = 0
+    Top = 0
+    Width = 493
+    Height = 155
+    Align = alClient
+    Caption = 'Reiniciar Servi'#231'o'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -27
+    Font.Name = 'Segoe UI'
+    Font.Style = [fsBold]
+    ParentFont = False
+    OnClick = btnReiniciarClick
+    ExplicitLeft = 296
+    ExplicitTop = 88
+    ExplicitWidth = 23
+    ExplicitHeight = 22
+  end
+end

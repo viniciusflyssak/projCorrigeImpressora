@@ -1,0 +1,35 @@
+unit uFrmPrincipal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Buttons, ShellApi, SWSystem;
+
+type
+  TfrmPrincipal = class(TForm)
+    btnReiniciar: TSpeedButton;
+    procedure btnReiniciarClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmPrincipal: TfrmPrincipal;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmPrincipal.btnReiniciarClick(Sender: TObject);
+begin
+  ShellExecute(Handle, 'runas net stop spooler', 'cmd', nil, nil, SW_SHOWNORMAL);
+//  WinExec('cmd /c net stop spooler ',SW_Hide);
+//  sleep(1000);
+//  WinExec('cmd /c net start spooler ',SW_Hide);
+//  ShowMessage('Serviço reiniciado!');
+end;
+
+end.
